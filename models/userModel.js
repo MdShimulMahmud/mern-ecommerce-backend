@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema({
     required: [true, "Password must be required"],
     set: (v) => bcrypt.hashSync(v, bcrypt.genSaltSync(10)),
   },
+  role: {
+    type: String,
+    default: "user",
+  },
 });
 
 // userSchema.pre("save", async function (next) {
