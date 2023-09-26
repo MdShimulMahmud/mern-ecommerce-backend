@@ -93,7 +93,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
     throw new Error(error);
   }
 });
-
+// upto authentication done
 module.exports = {
   createUser,
   loginUser,
